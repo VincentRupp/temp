@@ -1,0 +1,26 @@
+.bluediv {
+	background-color:blue;
+	font-size:0.6em;
+	text-align:right;
+	width:200px;
+	float:right;
+}
+
+.imagediv {
+	margin:0 auto;
+	text-align:center;
+}
+
+.caption {
+	font-size:0.6em;
+	font-style:italic;
+	text-align:center;
+}
+.outputimage {
+	height:400px;
+	width:400px;
+}
+
+.regulartext {
+	font-size:0.6em;
+}

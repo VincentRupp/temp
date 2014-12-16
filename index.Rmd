@@ -1,0 +1,80 @@
+---
+title       : Decorate your Christmas Tree
+subtitle    : using R!
+author      : Vincent Rupp
+job         : lol =(
+framework   : html5slides   # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Holidays
+<br>
+<div class="introdiv">
+<p>There are few things people love more than holidays (possibly cats). Brazillians love vacaciones and Germans love Ferien. Every language around the world has a word for holidays.</p>
+</div>
+<br>
+<div class="imagediv">
+<img src="C:/Coursera/Data_Science/09_Data_Products/Slidify_Project/assets/img/feast.jpg" alt="fixed path" height="322" width="400">
+<p class="caption">The Feast of the Bean King (wikipedia commons)</p>
+</div>
+
+---
+
+## Winter Holidays in the USA
+<p class="regulartext">Here in the US, it's time for our annual winter holiday. We celebrate with sweet baked goods, family, and the exchange of wrapped gifts. In fact, we buy so much stuff this time of year that the holiday dominates our retail sales.<p>
+
+```{r echo=FALSE,warning=FALSE}
+library(quantmod)
+library(rCharts)
+seriesID <- 'RSAFSNA'
+options("GetSymbols.warning4.0"=FALSE)
+series <- getSymbols(seriesID,src="FRED",
+                     auto.assign=FALSE,warnings=FALSE)
+series2 <- series["2000-01-01/2013-12-31"]
+plot(series2,main="Retail Sales - December Spikes",ylab="Index Value")
+```
+
+--- .class #id
+
+## I Hate Slidify
+<div class="regulartext">
+<p>This is such crap. It's too new to have good answers on Stackoverflow, the documentation is extremely poor, and I'm spending hours trying to do basic stuff. For example:</p>
+<ul>
+<li>I can't control the size of that plot in the previous slide. The output should be a .png file, but when I put a div around the r-chunk, it doesn't display.</li>
+<li>2. That image file on the first slide has an absolute path link because I tried nine different relative paths and none worked. The only thing online is a stackoverflow post where Ramnath tells someone to try putting the image in the same folder as index.html. Yeah, the guy who made an assets/img folder apparently doesn't know how to use it.</li>
+<li>I had to write css to make this text smaller because the default is -- whoops, out of room on the slide. Here's some R-code so you can verify I know how to use it.</li></ul>
+</div>
+```{r echo=TRUE}
+2 + 5
+```
+
+--- 
+
+## Back to the presentation
+
+Hey, you like trees? Sure you do. You love them. At the US winter holiday (which most people celebrate as 'Christmas' but some people get mad at that and other people get mad at the people who get mad at that).
+
+In 2002, according to Wikipedia, 20.8 million trees were cut down in the US to make Christmas trees. People drag them inside their houses, stand them up in a corner, and cover them with a melange of decorative lights and ornaments.
+
+Fun Fact: 20.8 is only real solution to the equation 
+
+$$x^2-41.6x+432.64=0$$
+
+<div class="caption">mathjax!</div>
+
+---
+
+## This is Slide 5
+<div class="regulartext">
+<p>My application (which you've already seen) allows a person to decorate a Christmas tree. Doesn't that sound like fun? Sure it does. I bet you made trees that involves changing every input: sliders, numeric input box, drop-down colors. Yep, my pitch is that it is a great app!!<p>
+
+<p>I wanted to be able to layer ornaments of different sizes and colors, and add tinsel and lights, but with so few resources for Shiny, the time I'd spend figuring it out seemed way too high considering the minimums of the assignment are so very very low.</p>
+<p>In conclusion, here's a cat saying <span style="font-size:1.2em"><strong>Happy Holidays!</strong></span></p>
+</div>
+<div class="imagediv">
+<img src="C:/Coursera/Data_Science/09_Data_Products/Slidify_Project/assets/img/cat2.png" alt="fixed path 2" height="334" width="250">
+</div>
